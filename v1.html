@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<canvas id="canvas" width="800" height="1000"></canvas>
+<script>
+
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+
+//bg
+ctx.fillStyle = "#1A1B26"
+ctx.fillRect(0, 0, 800, 1000)
+
+//grades by teacher (150 - 360 - 605 - 850)
+ctx.fillStyle = "#73DACA"
+ctx.fillRect(120, 150, 200, 455)
+ctx.fillStyle = "#F7768E"
+ctx.fillRect(120, 605, 200, 245)
+
+//tasks done by me (150 - 395 - 623 - 850)
+ctx.fillStyle = "#F7768E"
+ctx.fillRect(480, 150, 200, 245)
+ctx.fillStyle = "#73DACA"
+ctx.fillRect(480, 395, 200, 455)
+
+//markers
+ctx.fillStyle = "#1A1B26"
+ctx.fillRect(120, 358, 200, 4)   //grades, 70%
+ctx.fillRect(120, 603, 200, 4)   //grades, 35%
+ctx.fillRect(480, 393, 200, 4)   //tasks, 65%
+ctx.fillRect(480, 621, 200, 4)   //tasks, 33%
+
+//text
+ctx.fillStyle = "#1A1B26"
+ctx.font = "20px sans-serif"
+ctx.textAlign = "center"
+ctx.fillText("Best Grade", 220, 265, 200)
+ctx.fillText("Passed", 220, 493, 200)
+ctx.fillText("Failed", 220, 738, 200)
+ctx.fillText("Not done", 580, 283, 200)
+ctx.fillText("Done", 580, 519, 200)
+ctx.fillText("Done (50% mark)", 580, 747, 200)
+ctx.fillStyle = "#A9B1D6"
+ctx.font = "30px sans-serif"
+ctx.fillText("Grades", 220, 140, 200)
+ctx.fillText("Tasks done", 580, 140, 200)
+
+</script>
+
+</body>
+</html>
