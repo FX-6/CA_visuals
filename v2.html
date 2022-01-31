@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<canvas id="canvas" width="750" height="1300"></canvas>
+<script>
+
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+
+var bg = "#1A1B26", font = "#A9B1D6", green = "#73DACA", red = "#F7768E"
+
+//bg
+ctx.fillStyle = bg
+ctx.fillRect(0, 0, 750, 1200)
+
+//grade backgrouns
+ctx.globalAlpha = 0.5
+ctx.fillStyle = "#00FF00"
+ctx.fillRect(150, 100, 450, 300)
+ctx.fillStyle = "#62ff00"
+ctx.fillRect(150, 400, 450, 120)
+ctx.fillStyle = "#80ff00"
+ctx.fillRect(150, 520, 450, 110)
+ctx.fillStyle = "#aeff00"
+ctx.fillRect(150, 630, 450, 120)
+ctx.fillStyle = "#AA2200"
+ctx.fillRect(150, 750, 450, 175)
+ctx.fillStyle = "#FF0000"
+ctx.fillRect(150, 925, 450, 175)
+ctx.globalAlpha = 1
+
+//line
+ctx.strokeStyle = "#A9B1D6"
+ctx.lineWidth = 5;
+ctx.beginPath()
+ctx.moveTo(150, 100)
+ctx.lineTo(150, 1100)
+ctx.lineTo(600, 1100)
+ctx.lineTo(600, 100)
+ctx.stroke()
+
+//tasks done
+ctx.fillStyle = font
+ctx.fillRect(250, 450, 250, 160)
+ctx.fillRect(250, 612.5, 250, 160)
+ctx.fillRect(250, 775, 250, 160)
+ctx.fillRect(250, 937.5, 250, 160)
+
+//text
+ctx.fillStyle = font
+
+ctx.font = "30px sans-serif"
+ctx.textAlign = "left"
+ctx.fillText("Grade", 600, 50)
+ctx.font = "20px sans-serif"
+ctx.fillText("1.0 (70%)", 610, 400)
+ctx.fillText("2.0 (58%)", 610, 520)
+ctx.fillText("3.0 (47%)", 610, 630)
+ctx.fillText("4.0 (35%)", 610, 750)
+ctx.fillText("5.0 (17.5%)", 610, 925)
+ctx.fillText("6.0 (0%)", 610, 1100)
+
+ctx.font = "30px sans-serif"
+ctx.textAlign = "right"
+ctx.fillText("Tasks", 150, 50)
+ctx.font = "20px sans-serif"
+ctx.fillText("26 (100%)", 140, 115)
+ctx.fillText("20 (77%)", 140, 330)
+ctx.fillText("13 (50%)", 140, 600)
+ctx.fillText("7 (27%)", 140, 830)
+ctx.fillText("0%", 140, 1100)
+
+ctx.font = "30px sans-serif"
+ctx.textAlign = "center"
+ctx.fillText("What I did", 375, 50)
+ctx.font = "20px sans-serif"
+ctx.fillText("Tasks I did (% of Tasks I did | % of total tasks)", 375, 90)
+ctx.fillStyle = bg
+ctx.fillText("17 (100% | 65%)", 375, 445)
+ctx.fillText("13 (76% | 50%)", 375, 607.5)
+ctx.fillText("8.5 (50% | 33%)", 375, 770)
+ctx.fillText("4 (24% | 15%)", 375, 932.5)
+
+</script>
+
+</body>
+</html>
